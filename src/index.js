@@ -1,12 +1,17 @@
 const express = require('express');
 const dbConnection = require('./config/db');
-const PORT = process.env.PORT || 3001;
 const clienteRoute = require('./routes/clienteroute');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 3001;
 const app = express();
+
+require('dotenv').config();
+
+// Connect to the database
 dbConnection();
+F
 
 app.use(cors());
 app.use(bodyParser.json());
