@@ -11,7 +11,7 @@ require('dotenv').config();
 
 // Connect to the database
 dbConnection();
-F
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use('/cliente', clienteRoute);
 
-require('dotenv').config();
 app.listen(PORT, () => {    
     console.log(`Server running on port ${PORT}`);
 });
